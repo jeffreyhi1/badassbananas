@@ -16,18 +16,19 @@ public class banana extends Activity {
 		final Button button = (Button) findViewById(R.id.Button);
 		button.setOnClickListener(new View.OnClickListener() {
 			public void onClick(View v) {
-				Klasse winnaar = null;
-				Klasse speler1 = new Sniper(200, 100);
-				Klasse speler2 = new Assault(100, 250);
+				Game thegame = new Game();
+				PlayerClass winner = null;
+				PlayerClass speler1 = new Sniper(200, 100);
+				PlayerClass speler2 = new Assault(100, 250);
 				// Assault wordt aangevallen door Sniper
-				winnaar = speler2.bereken(speler1);
+				winner = thegame.calculate(speler2, speler1);
 				System.out.println("winnaar is: "
-						+ winnaar.getClass().getName() + " met "
-						+ winnaar.levenspunten + " levenspunten");
+						+ winner.getClass().getName() + " met "
+						+ winner.healthpoints + " levenspunten");
 				Context context = getApplicationContext();
 				CharSequence text = "winnaar is: "
-					+ winnaar.getClass().getName() + " met "
-					+ winnaar.levenspunten + " levenspunten";
+					+ winner.getClass().getName() + " met "
+					+ winner.healthpoints + " levenspunten";
 				int duration = Toast.LENGTH_LONG;
 
 				Toast toast = Toast.makeText(context, text, duration);

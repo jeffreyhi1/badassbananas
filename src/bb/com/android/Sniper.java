@@ -1,11 +1,8 @@
 package bb.com.android;
 
-public class Sniper extends Klasse {
+public class Sniper extends PlayerClass {
 
-	public Sniper(int kracht, int levenspunten) {
-		super(kracht, levenspunten);
-
+	public Sniper(int power, int healthpoints) {
+		super(power, healthpoints);
 	}
-	
-
 }
