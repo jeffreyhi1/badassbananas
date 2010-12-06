@@ -20,7 +20,7 @@ public class banana extends Activity {
 				PlayerClass winner = null;
 				PlayerClass speler1 = new Sniper(200, 100);
 				PlayerClass speler2 = new Assault(100, 250);
-				// Assault wordt aangevallen door Sniper
+				// Assault is attacked by Sniper
 				winner = thegame.calculate(speler2, speler1);
 				System.out.println("winnaar is: "
 						+ winner.getClass().getName() + " met "
